@@ -1,0 +1,234 @@
+/* GENERAL */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1f26;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "banner banner banner" "player player player" "main main main" "footer footer footer";
+    grid-template-rows: [row1-start] 80vh[row1-end row2-start] 5em [row2-end row3-start] 10em [row3-end];
+    grid-template-columns: 2% 1fr 2%;
+}
+
+
+/* HEAD */
+
+body > header {
+    grid-area: banner;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e34768;
+    background: rgba(248, 119, 32, 1);
+    background: -moz-linear-gradient(-45deg, rgba(248, 119, 32, 1) 0%, rgba(225, 55, 92, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(248, 119, 32, 1)), color-stop(100%, rgba(225, 55, 92, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(248, 119, 32, 1) 0%, rgba(225, 55, 92, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(248, 119, 32, 1) 0%, rgba(225, 55, 92, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(248, 119, 32, 1) 0%, rgba(225, 55, 92, 1) 100%);
+    background: linear-gradient(135deg, rgba(248, 119, 32, 1) 0%, rgba(225, 55, 92, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f87720', endColorstr='#e1375c', GradientType=1);
+}
+
+header > span:first-of-type {
+    display: flex;
+}
+
+header h1 {
+    align-self: flex-start;
+    margin: 1em 0 0 0.5em;
+    width: 2.4em;
+    text-align: center;
+    color: white;
+    padding: 0.3em;
+    border-bottom-right-radius: 0.5em;
+    -webkit-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
+    box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
+    background: rgba(85, 205, 177, 1);
+    background: -moz-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(85, 205, 177, 1)), color-stop(100%, rgba(23, 155, 167, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: linear-gradient(135deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1)
+}
+
+header h2 {
+    text-shadow: 6px 4px 11px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin: 1em 0 0 0;
+}
+
+header h3 {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+header > img:first-of-type {
+    width: 40%;
+    border-radius: 50%;
+    margin: 1em 0 1em;
+    -webkit-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
+    box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
+}
+
+header > img:nth-of-type(2) {
+    width: 20%;
+    border-radius: 50%;
+    margin: 1em 0 1em;
+
+}
+
+header > p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+header > span {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+header button {
+    border: none;
+    background: none;
+    text-indent: -686em;
+    margin-top: 1em;
+    height: 8em;
+    width: 8em;
+    background-image: url(../images/play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header > span > label {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 0.03em;
+    width: 11em;
+    text-shadow:
+}
+
+/* PLAYER INFO START */
+
+aside {
+    grid-area: player;
+    display: flex;
+    background-color: #179ba7;
+}
+
+aside > span {
+    width: 80%;
+    height: 90%;
+    margin-top: 0.25em;
+    border-right: solid 1px;
+    border-color: white;
+}
+
+aside > span > p {
+    margin: 0.2em 0 0 2%;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    color: #1c1f26;
+    font-size: 0.8em;
+
+}
+
+aside > span > h1 {
+    margin: 0.1em 0 0 2%;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    color: white;
+    font-size: 1.4em;
+}
+
+aside > span > h2 {
+    margin: 0.2em 0 0 2%;
+    font-weight: 550;
+    letter-spacing: 0.3em;
+    color: #1c1f26;
+    font-size: 1.2em;
+
+}
+
+aside button:first-of-type {
+    border: none;
+    background: none;
+    text-indent: -686em;
+    margin-left: 0.3em;
+    width: 5em;
+    background-image: url(../images/play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+aside button:nth-of-type(2) {
+    border: none;
+    background: none;
+    text-indent: -686em;
+    margin: 0.2em 0.3em 0 auto;
+    height: 1.3em;
+    width: 1.3em;
+    background-image: url(../images/cancel-music.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* PLAYER INFO END */
+
+/* MAIN START */
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > img:first-of-type {
+    margin-top: 5em;
+    margin-bottom: 2em;
+    width: 5%;
+    position: fixed;
+
+}
+
+article:first-of-type {
+    width: 100%;
+    margin-top: 6em;
+    background-color: #179ba7;
+}
+
+/* PLAYER INFO END */
+
+#arrow {
+    -webkit-animation-delay: 2.5s;
+    -moz-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    animation-duration: 3s;
+
+    animation-iteration-count: 3;
+    -moz-animation-iteration-count: 3;
+    -webkit-animation-iteration-count: 3;
+}
