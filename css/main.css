@@ -11,7 +11,7 @@ body {
 body {
     display: grid;
     grid-template-areas: "banner banner banner" "player player player" "main main main" "footer footer footer";
-    grid-template-rows: [row1-start] 80vh[row1-end row2-start] 5em [row2-end row3-start] 10em [row3-end];
+    grid-template-rows: [row1-start] 100vh[row1-end row2-start] 5em [row2-end row3-start] 10em [row3-end];
     grid-template-columns: 2% 1fr 2%;
 }
 
@@ -63,29 +63,16 @@ header h2 {
     text-shadow: 6px 4px 11px rgba(0, 0, 0, 0.3);
     color: white;
     margin: 1em 0 0 0;
+    font-size: 3em;
 }
 
 header h3 {
     color: white;
     font-weight: 700;
     letter-spacing: 0.1em;
+    margin: 0 0 3em 0;
 }
 
-header > img:first-of-type {
-    width: 40%;
-    border-radius: 50%;
-    margin: 1em 0 1em;
-    -webkit-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
-    -moz-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
-    box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
-}
-
-header > img:nth-of-type(2) {
-    width: 20%;
-    border-radius: 50%;
-    margin: 1em 0 1em;
-
-}
 
 header > p {
     color: white;
@@ -103,7 +90,7 @@ header button {
     border: none;
     background: none;
     text-indent: -686em;
-    margin-top: 1em;
+    margin-top: 3em;
     height: 8em;
     width: 8em;
     background-image: url(../images/play.svg);
@@ -122,7 +109,6 @@ header > span > label {
     font-size: 1.2em;
     letter-spacing: 0.03em;
     width: 11em;
-    text-shadow:
 }
 
 /* PLAYER INFO START */
@@ -204,8 +190,7 @@ main {
 }
 
 main > img:first-of-type {
-    margin-top: 5em;
-    margin-bottom: 2em;
+    bottom: 2em;
     width: 5%;
     position: fixed;
 
