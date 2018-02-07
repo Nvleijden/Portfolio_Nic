@@ -32,9 +32,9 @@ body > header {
     background: -ms-linear-gradient(-45deg, rgba(248, 119, 32, 1) 0%, rgba(225, 55, 92, 1) 100%);
     background: linear-gradient(135deg, rgba(248, 119, 32, 1) 0%, rgba(225, 55, 92, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f87720', endColorstr='#e1375c', GradientType=1);
-    -webkit-box-shadow: 0px 13px 30px -5px rgba(0,0,0,0.84);
--moz-box-shadow: 0px 13px 30px -5px rgba(0,0,0,0.84);
-box-shadow: 0px 13px 30px -5px rgba(0,0,0,0.84);
+    -webkit-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
 }
 
 header > span:first-of-type {
@@ -122,33 +122,39 @@ aside {
     background-color: #1c1f26;
     border: none;
 }
-aside span{
+
+aside span {
     margin-left: 5%;
 }
 
 aside h1 {
     color: white;
     font-size: 2.5em;
-    margin-top: 0.7em;
-    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.1em;
 }
 
 aside h2 {
     color: white;
     margin-top: 0;
-    
+
 }
+
 aside div {
     align-self: flex-start;
-    margin-left: auto;
-    margin-right: 10%;
-    height: 7em;
-    margin-top: -3.47em;
-    border-radius: 4em;
-    width: 7em;
-    display: flex;
+    position: absolute;
+    margin-top: -2.5em;
+    border-radius: 50%;
     flex-direction: column;
     justify-content: center;
+    display: flex;
+}
+
+aside div:first-of-type {
+    right: 4em;
+    top: 74.3vh;
+    height: 6em;
+    width: 6em;
     background: rgba(85, 205, 177, 1);
     background: -moz-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(85, 205, 177, 1)), color-stop(100%, rgba(23, 155, 167, 1)));
@@ -156,35 +162,81 @@ aside div {
     background: -o-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: -ms-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: linear-gradient(135deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1)
-    -webkit-box-shadow: 0px 13px 30px -5px rgba(0,0,0,0.84);
--moz-box-shadow: 0px 13px 30px -5px rgba(0,0,0,0.84);
-box-shadow: 0px 13px 30px -5px rgba(0,0,0,0.84);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1) -webkit-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
 }
 
-aside div:hover, aside div:focus{
-background: rgba(115,243,255,1);
-background: -moz-linear-gradient(-45deg, rgba(115,243,255,1) 0%, rgba(23,154,166,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(115,243,255,1)), color-stop(100%, rgba(23,154,166,1)));
-background: -webkit-linear-gradient(-45deg, rgba(115,243,255,1) 0%, rgba(23,154,166,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(115,243,255,1) 0%, rgba(23,154,166,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(115,243,255,1) 0%, rgba(23,154,166,1) 100%);
-background: linear-gradient(135deg, rgba(115,243,255,1) 0%, rgba(23,154,166,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73f3ff', endColorstr='#179aa6', GradientType=1 );
+play:hover,
+play:focus {
+    background-color: #1c1f26;
+    box-sizing: border-box;
+    background: #1c1f26;
+    border-color: #179ba7;
+    border-width: 3px;
+    border-style: solid;
+
 }
 
-aside div button{
+#play_button:focus,
+#play_button:hover {
+    background-image: url(../images/play_blue.svg);
+    margin: auto 0.5em;
+
+}
+
+aside div:first-of-type button:first-of-type {
     border: none;
     background: none;
     text-indent: -688em;
     background-image: url(../images/play.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 5em;
-    height: 5em;
-    margin: auto 2.7em;
+    background-size: 4em;
+    width: 6em;
+    height: 6em;
+    margin: auto 0.8em;
+
 }
+
+aside div:nth-of-type(2) {
+    right: 0.5em;
+    top: 76.85vh;
+    height: 3em;
+    width: 3em;
+    background: rgba(85, 205, 177, 1);
+    background: rgba(249, 127, 45, 1);
+    background: -moz-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(249, 127, 45, 1)), color-stop(100%, rgba(227, 71, 105, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: linear-gradient(135deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f97f2d', endColorstr='#e34769', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1) -webkit-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+}
+
+aside div:nth-of-type(2) button:first-of-type {
+    border: none;
+    background: none;
+    text-indent: -688em;
+    background-image: url(../images/fast-forward-thick.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2em;
+    height: 2em;
+    margin: auto 0.9em;
+
+}
+
+#forward:hover,
+#forward:focus {
+    background-color: red;
+}
+
 /* PLAYER INFO END */
 
 /* MAIN START */
@@ -200,7 +252,6 @@ main > img:first-of-type {
     bottom: 2em;
     width: 5%;
     position: fixed;
-
 }
 
 article:first-of-type {
@@ -223,4 +274,13 @@ article:first-of-type {
     animation-iteration-count: 3;
     -moz-animation-iteration-count: 3;
     -webkit-animation-iteration-count: 3;
+}
+
+@media only screen and (min-width: 440px) {
+    aside div:first-of-type {
+        right: 4.5em;
+    }
+    aside div:nth-of-type(2) {
+        right: 1em;
+    }
 }
