@@ -11,7 +11,7 @@ body {
 body {
     display: grid;
     grid-template-areas: "banner banner banner" "player player player" "main main main" "footer footer footer";
-    grid-template-rows: [row1-start] 75vh[row1-end row2-start] 25em [row2-end row3-start] 10em [row3-end];
+    grid-template-rows: [row1-start] 75vh[row1-end row2-start] 25vh [row2-end row3-start] auto[row3-end];
     grid-template-columns: 2% 1fr 2%;
 }
 
@@ -52,14 +52,7 @@ header h1 {
     -webkit-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
     -moz-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
     box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
-    background: rgba(85, 205, 177, 1);
-    background: -moz-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(85, 205, 177, 1)), color-stop(100%, rgba(23, 155, 167, 1)));
-    background: -webkit-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: linear-gradient(135deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1)
+
 }
 
 header h2 {
@@ -67,13 +60,18 @@ header h2 {
     color: white;
     margin: 1em 0 0 0;
     font-size: 3em;
+
+
 }
 
 header h3 {
     color: white;
     font-weight: 700;
     letter-spacing: 0.1em;
-    margin: 0 0 3em 0;
+    justify-content: space-between;
+    margin: 1em auto;
+
+
 }
 
 
@@ -87,6 +85,13 @@ header > span {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+}
+
+header > span:first-of-type {
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header button {
@@ -180,12 +185,11 @@ play:focus {
 
 #play_button:focus,
 #play_button:hover {
-    background-image: url(../images/play_blue.svg);
-    margin: auto 0.5em;
-
+    background-image: url(../images/play_white.svg);
 }
 
 aside div:first-of-type button:first-of-type {
+    z-index: au;
     border: none;
     background: none;
     text-indent: -688em;
@@ -256,8 +260,69 @@ main > img:first-of-type {
 
 article:first-of-type {
     width: 100%;
-    margin-top: 6em;
     background-color: #179ba7;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(85, 205, 177, 1);
+    background: -moz-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(85, 205, 177, 1)), color-stop(100%, rgba(23, 155, 167, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    background: linear-gradient(135deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1)
+}
+
+article:first-of-type > img:first-of-type {
+    width: 10em;
+    border-radius: 1em;
+    align-self: center;
+}
+
+article:first-of-type > h2 {
+    font-weight: 900;
+    font-size: 1.7em;
+}
+
+article:first-of-type > p {
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 1em 1em
+}
+
+article:first-of-type > p:nth-of-type(2) {
+    margin-bottom: 2.5em;
+}
+
+article:nth-of-type(2) > section {
+    color: white;
+    text-align: center;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+article:nth-of-type(2) > section > h1 {
+    font-weight: 500;
+    font-size: 1.7em;
+    margin: 0;
+
+}
+
+article:nth-of-type(2) > section > img {
+    width: 25%;
+    margin: 0.5em 0 0.5em 0;
+    align-self: center;
+}
+
+article:nth-of-type(2) > section > p {
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* PLAYER INFO END */

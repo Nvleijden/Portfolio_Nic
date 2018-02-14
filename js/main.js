@@ -1,4 +1,8 @@
 var arrow = document.querySelector("#arrow");
+window.sr = ScrollReveal();
+sr.reveal('.me', {
+    reset: true,
+});
 document.addEventListener("scroll", function () {
 
     if (window.pageYOffset > 50) {
