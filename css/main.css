@@ -306,7 +306,7 @@ article:first-of-type > p:nth-of-type(2) {
 }
 
 article:nth-of-type(2) {
-
+    width: 100%;
     background: rgba(28, 31, 38, 1);
     background: -moz-linear-gradient(45deg, rgba(28, 31, 38, 1) 0%, rgba(70, 92, 105, 1) 100%);
     background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(28, 31, 38, 1)), color-stop(100%, rgba(70, 92, 105, 1)));
@@ -318,6 +318,7 @@ article:nth-of-type(2) {
 }
 
 article:nth-of-type(2) > section {
+    width: 100%;
     color: white;
     text-align: center;
     margin-top: 2em;
@@ -344,6 +345,7 @@ article:nth-of-type(2) > section > img {
 article:nth-of-type(2) > section > p {
     width: 90%;
     margin: 0 auto;
+    max-width: 35em;
 }
 
 article:nth-of-type(3) {
@@ -370,9 +372,8 @@ article:nth-of-type(3) > section {
     background-color: #1c1f26;
     padding: 0.5em 1em;
     border-radius: 1em;
-    max-width: 20em;
-    width: 20em;
-
+    min-width: 10em;
+    width: 30em;
     background: rgba(28, 31, 38, 1);
     background: -moz-linear-gradient(45deg, rgba(28, 31, 38, 1) 0%, rgba(70, 92, 105, 1) 100%);
     background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(28, 31, 38, 1)), color-stop(100%, rgba(70, 92, 105, 1)));
@@ -385,9 +386,13 @@ article:nth-of-type(3) > section {
 }
 
 article:nth-of-type(3) > section > img {
-    max-width: 85%;
+    max-width: 100%;
     margin: 0.5em 0 0.5em 0;
     align-self: center;
+}
+
+article:nth-of-type(3) > section > h1 {
+    font-size: 2.5em;
 }
 
 article:nth-of-type(3) > section > p {

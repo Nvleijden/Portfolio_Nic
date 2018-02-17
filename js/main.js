@@ -1,8 +1,6 @@
 var arrow = document.querySelector("#arrow");
 window.sr = ScrollReveal();
-sr.reveal('.me', {
-    reset: true,
-});
+sr.reveal('.me');
 sr.reveal('.workItem', {
     reset: true,
 });
