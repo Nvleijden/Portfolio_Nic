@@ -3,6 +3,13 @@ window.sr = ScrollReveal();
 sr.reveal('.me', {
     reset: true,
 });
+sr.reveal('#myWork', {
+    reset: true,
+});
+
+sr.reveal('.workItem', {
+    reset: true,
+});
 document.addEventListener("scroll", function () {
 
     if (window.pageYOffset > 50) {
