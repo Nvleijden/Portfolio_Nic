@@ -5,9 +5,8 @@ var song = document.querySelector("#song");
 var genre = "hello";
 var genreBox = document.querySelector("#genre");
 var oldgenre = "niks";
-var songActive = 0;
+var songActive = false;
 var i = 0;
-
 window.sr = ScrollReveal();
 sr.reveal('.me');
 sr.reveal('.workItem', {
@@ -34,33 +33,44 @@ document.addEventListener("scroll", function () {
     }
 });
 // dance music
-var dance = ["./audio/dance/Beam.mp3", "./audio/dance/IngridHybrid.mp3", "./audio/dance/Constellations.mp3"];
-
+var dancing = ["./audio/dance/Beam.mp3", "./audio/dance/IngridHybrid.mp3", "./audio/dance/Constellations.mp3"];
 var danceNames = ["Beam", "Ingrid Is A Hybrid", "Constellations"];
 var danceArtists = ["Mako", "Dusky", "Fred V & Grafix"];
 
 
-song.src = dance[1];
+
 
 
 genreBox.onchange = function () {
-    console.log("ik werk");
-    console.log(genreBox.value);
-    console.log(oldgenre);
+    if (genreBox.value != oldgenre) {
+        oldgenre = genreBox.value;
+
+        i = 0;
+        console.log("genreboxvalue = " + genreBox.value);
+        if (genreBox.value == "dancing") {
+            console.log("hi");
+            song.src = dancing[0];
+            playPause();
+            song.play();
+        }
 
 
-    oldgenre = genreBox.value;
+
+
+
+    }
+
 }
 
 function playPause() {
-    if (songActive == 0) {
+    if (songActive == false) {
         song.play();
         playButton.classList.add("play_button_clicked");
         playButton.classList.remove("play_button");
-        songActive = 1;
+        songActive = true;
     } else {
         song.pause();
-        songActive = 0;
+        songActive = false;
         playButton.classList.toggle("play_button");
         playButton.classList.remove("play_button_clicked");
     }
