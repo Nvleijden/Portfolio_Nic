@@ -5,7 +5,6 @@ var song = document.querySelector("#song");
 var genre = "hello";
 var genreBox = document.querySelector("#genre");
 var oldgenre = "niks";
-var songActive = false;
 var i = 0;
 window.sr = ScrollReveal();
 sr.reveal('.me');
@@ -42,19 +41,6 @@ var danceArtists = ["Mako", "Dusky", "Fred V & Grafix"];
 
 
 genreBox.onchange = function () {
-    if (genreBox.value != oldgenre) {
-        oldgenre = genreBox.value;
-
-        i = 0;
-        console.log("genreboxvalue = " + genreBox.value);
-        if (genreBox.value == "dancing") {
-            console.log("hi");
-            song.src = dancing[0];
-            playPause();
-            song.play();
-        }
-
-
 
 
 
