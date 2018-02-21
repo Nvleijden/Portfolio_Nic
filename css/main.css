@@ -171,6 +171,7 @@ aside div {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1) -webkit-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     -moz-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    transition: all 1s;
 }
 
 play:hover,
@@ -181,12 +182,14 @@ play:focus {
     border-color: #179ba7;
     border-width: 3px;
     border-style: solid;
+    transition: all 1s;
 
 }
 
 .play_button:focus,
 .play_button:hover {
     background-image: url(../images/play_white.svg);
+    transition: all 1s;
 }
 
 .play_button {
@@ -201,6 +204,7 @@ play:focus {
     width: 6em;
     height: 6em;
     margin: auto auto;
+    transition: all 1s;
 
 }
 
@@ -216,10 +220,12 @@ play:focus {
     width: 6em;
     height: 6em;
     margin: auto auto;
+    transition: all 1s;
 }
 
 .play_button_clicked:hover {
     background-image: url(../images/pause_white.svg);
+    transition: all 1s;
 }
 
 #forward {
@@ -239,6 +245,7 @@ play:focus {
     -webkit-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     -moz-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    transition: all 1s;
 }
 
 #forward_button {
@@ -252,8 +259,7 @@ play:focus {
     width: 2em;
     height: 2em;
     margin: auto auto;
-<<<<<<< HEAD
-
+    transition: all 1s;
 }
 
 
@@ -262,8 +268,7 @@ play:focus {
 #forward:hover,
 #forward:focus {
     background-color: red;
-=======
->>>>>>> dca778f4ea552b18cb13db8630c69581a206fcc0
+    ======= > > > > > > > dca778f4ea552b18cb13db8630c69581a206fcc0
 }
 
 /* PLAYER INFO END */
@@ -317,13 +322,15 @@ article:first-of-type > img:first-of-type {
 article:first-of-type > h2 {
     font-weight: 900;
     font-size: 1.7em;
+    transition: all 3s;
 }
 
 article:first-of-type > p {
     text-align: left;
     font-size: 1.2em;
     line-height: 1.5em;
-    margin: 2em 2em
+    margin: 2em 2em;
+    transition: all 3s;
 }
 
 article:first-of-type > p:nth-of-type(2) {
@@ -369,9 +376,10 @@ article:nth-of-type(2) > section > img {
     opacity: 0.85
 }
 
-article:nth-of-type(2) > section > img:hover{
+article:nth-of-type(2) > section > img:hover {
     opacity: 1;
 }
+
 article:nth-of-type(2) > section > p {
     width: 90%;
     margin: 0 auto;
@@ -423,13 +431,15 @@ article:nth-of-type(3) > section > h1 {
     text-align: center;
     margin-bottom: 0.5em;
 }
-article:nth-of-type(3) > section > h2{
+
+article:nth-of-type(3) > section > h2 {
     text-align: center;
     color: white;
     margin: 0 0 0.3em 0;
     font-weight: 700;
 }
-article:nth-of-type(3) > section > h3{
+
+article:nth-of-type(3) > section > h3 {
     font-weight: bolder;
     font-size: 1.2em;
     text-indent: 0.5em;
@@ -441,7 +451,7 @@ article:nth-of-type(3) > section > p {
     font-size: 1.2em
 }
 
-article:nth-of-type(3) > section> button{
+article:nth-of-type(3) > section > button {
     background: none;
     color: white;
     border-style: solid;
@@ -453,7 +463,8 @@ article:nth-of-type(3) > section> button{
     margin-bottom: 1em;
     border-color: rgba(85, 205, 177, 1);
 }
-article:nth-of-type(3) > section> button:hover{
+
+article:nth-of-type(3) > section > button:hover {
     background: rgba(85, 205, 177, 1);
     background: -moz-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(85, 205, 177, 1)), color-stop(100%, rgba(23, 155, 167, 1)));
@@ -461,9 +472,10 @@ article:nth-of-type(3) > section> button:hover{
     background: -o-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: -ms-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: linear-gradient(135deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1) ;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1);
     border-width: 0px;
 }
+
 article:nth-of-type(4) {
     width: 100%;
     background-color: #179ba7;
@@ -523,23 +535,26 @@ main > article > button:hover {
     color: rgba(28, 31, 38, 1);
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     color: white;
 }
-footer span img{
+
+footer span img {
     width: 3em;
     opacity: 0.75;
 }
-footer span img:hover{
+
+footer span img:hover {
     opacity: 1;
 }
-footer span{
+
+footer span {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
     height: 3em;
     width: 35%;
@@ -547,7 +562,7 @@ footer span{
     margin: 0 auto 2em auto;
 }
 
-footer h1{
+footer h1 {
     color: white;
     text-align: center;
     font-size: 4em;
@@ -555,16 +570,17 @@ footer h1{
     margin: 1em 0 0 0;
 }
 
-footer h2{
+footer h2 {
     font-variant: small-caps;
     font-size: 2em;
     text-align: center;
 }
 
-footer p{
+footer p {
     font-size: 1.8em;
     text-align: center;
 }
+
 /* PLAYER INFO END */
 
 #arrow {

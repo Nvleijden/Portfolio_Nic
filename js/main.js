@@ -1,6 +1,10 @@
+//select beam by Mako as standard song
+
 var arrow = document.querySelector("#arrow");
 var playButton = document.querySelector(".play_button");
 var forwardButton = document.querySelector("#forward_button");
+var artist = document.querySelector("#artistName");
+var title = document.querySelector("#songName");
 var song = document.querySelector("#song");
 var genre = "hello";
 var genreBox = document.querySelector("#genre");
@@ -34,12 +38,12 @@ document.addEventListener("scroll", function () {
 });
 // dance music
 var dancing = ["./audio/dance/Beam.mp3", "./audio/dance/IngridHybrid.mp3", "./audio/dance/Constellations.mp3"];
-var danceNames = ["Beam", "Ingrid Is A Hybrid", "Constellations"];
+var danceTitles = ["Beam", "Ingrid Is A Hybrid", "Constellations"];
 var danceArtists = ["Mako", "Dusky", "Fred V & Grafix"];
 
 
 
-
+song.src = dancing[0];
 
 genreBox.onchange = function () {
     if (genreBox.value != oldgenre) {
@@ -50,6 +54,8 @@ genreBox.onchange = function () {
         if (genreBox.value == "dancing") {
             console.log("hi");
             song.src = dancing[0];
+            title.innerHTML = danceTitles[i];
+            artist.innerHTML = danceArtists[i];
             playPause();
             song.play();
         }
