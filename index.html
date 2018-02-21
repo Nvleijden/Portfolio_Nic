@@ -26,25 +26,25 @@
         <select onchange="changeGenre()" name="genre" id="genre">
         <option value="none" disabled selected >I feel like:</option>
         <option value="dancing">Going all out!</option>
-        <option value="rock">A Rockstar</option>
+        <option value="rock">Rocking out</option>
         <option value="indie">Something new</option>
         </select>
         </span>
 
-        <audio id="song" src=""></audio>
+        <audio id="song" src="" onended="next()"></audio>
 
 
     </header>
     <aside>
         <span>
-        <h1 id="title">Pay no mind</h1>
-        <h2 id="artist">By Madeon</h2>
+        <h1 id="title"></h1>
+        <h2 id="artist"></h2>
         </span>
         <div id="play">
             <button class="play_button" onclick="playPause()">playpause</button>
         </div>
         <div id="forward">
-            <button id="forward_button">Skip</button>
+            <button id="forward_button" onclick="next()">Skip</button>
         </div>
     </aside>
     <main>

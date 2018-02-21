@@ -9,6 +9,8 @@ var genreBox = document.querySelector("#genre");
 var oldgenre = "niks";
 var i = 0;
 var songActive = false;
+song.volume = 0.3;
+
 window.sr = ScrollReveal();
 sr.reveal('.me');
 sr.reveal('.workItem', {
@@ -50,24 +52,53 @@ var indie = ["./audio/indie/Disposable.mp3", "./audio/indie/Handclap.mp3", "./au
 var indieTitles = ["Disposable Friends", "Handclap", "we are the hearts"];
 var indieArtists = ["Humble Braggers", "Fitz and the Tantrums", "EXGF"];
 
+function next() {
+    console.log("triggered")
+    if (i == 2) {
+        i = 0;
+    } else {
+        i++;
+    }
 
-
+    if (genreBox.value == "dancing") {
+        song.src = dance[i];
+        artist.innerHTML = danceArtists[i];
+        title.innerHTML = danceTitles[i];
+        play();
+    } else if (genreBox.value == "rock") {
+        song.src = rock[i];
+        console.log(song.src);
+        artist.innerHTML = rockArtists[i];
+        title.innerHTML = rockTitles[i];
+        play();
+    } else if (genreBox.value == "indie") {
+        song.src = indie[i];
+        artist.innerHTML = indieArtists[i];
+        title.innerHTML = indieTitles[i];
+        play();
+    }
+}
 
 function changeGenre() {
     if (oldgenre != genreBox.value) {
         i = 0;
         console.log("ik trigger");
         console.log(genreBox.value);
-        playPause();
         if (genreBox.value == "dancing") {
             song.src = dance[i];
+            artist.innerHTML = danceArtists[i];
+            title.innerHTML = danceTitles[i];
             play();
         } else if (genreBox.value == "rock") {
             song.src = rock[i];
             console.log(song.src);
+            artist.innerHTML = rockArtists[i];
+            title.innerHTML = rockTitles[i];
             play();
         } else if (genreBox.value == "indie") {
             song.src = indie[i];
+            artist.innerHTML = indieArtists[i];
+            title.innerHTML = indieTitles[i];
             play();
         }
     }
@@ -77,15 +108,17 @@ function changeGenre() {
 
 function playPause() {
     if (songActive == false) {
-        song.play();
+
         playButton.classList.toggle("play_button_clicked");
         playButton.classList.toggle("play_button");
         songActive = true;
+        song.play();
     } else {
-        song.pause();
+
         songActive = false;
         playButton.classList.toggle("play_button");
         playButton.classList.toggle("play_button_clicked");
+        song.pause();
     }
 }
 
@@ -96,7 +129,10 @@ function play() {
     songActive = true;
 }
 
+
+
+
 //select next song
-song.onended = nextSong();
+
 
 function nextSong() {}
