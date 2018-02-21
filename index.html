@@ -18,16 +18,18 @@
         <span>
         <h3>Designer</h3><h3>Programmer</h3><h3>Gamer</h3>
         </span>
-        <span>        
+        <span>
         <label for="genre">Get to know me through music:</label>
         <select name="genre" id="genre">
-        <option value="none" selected disabled>I feel like:</option>
-        <option value="random">Being Random</option>
+        <option value="none" disabled selected >I feel like:</option>
+        <option value="Dancing">Dancing</option>
         <option value="rock">A Rockstar</option>
-        <option value="angry">Taking on the world</option>
-        <option value="sad">Shit</option>
+        <option value="Indie">A badass</option>
+        
         </select>
         </span>
+
+        <audio id="song" src=""></audio>
     </header>
     <aside>
         <span>
@@ -35,7 +37,7 @@
         <h2>By Madeon</h2>
         </span>
         <div id="play">
-            <button id="play_button">playpause</button>
+            <button class="play_button" onclick="playPause()">playpause</button>
         </div>
         <div id="forward">
             <button id="forward_button">Skip</button>
@@ -88,7 +90,8 @@
             <h1>my work</h1>
             <section class="workItem">
                 <h1>Search a book</h1>
-                <h2>nominated for a</h2><h2>CMD Golden Dot Award</h2>
+                <h2>nominated for a</h2>
+                <h2>CMD Golden Dot Award</h2>
                 <img src="images/zoekboek.jpg" alt="Search a book app designed by Nick">
                 <h3>type of work: Interface Design</h3>
                 <p>I designed an interface for the Communication and Multimedia Design Visual Interface Design course. The concept was designed for the public library of Amsterdam and The concept focuses on progressive disclosure, visual guidance and different states.</p>

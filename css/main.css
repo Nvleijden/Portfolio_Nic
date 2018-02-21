@@ -156,7 +156,7 @@ aside div {
     display: flex;
 }
 
-aside div:first-of-type {
+#play {
     right: 4em;
     top: 74.3vh;
     height: 6em;
@@ -184,12 +184,12 @@ play:focus {
 
 }
 
-#play_button:focus,
-#play_button:hover {
+.play_button:focus,
+.play_button:hover {
     background-image: url(../images/play_white.svg);
 }
 
-aside div:first-of-type button:first-of-type {
+.play_button {
     z-index: au;
     border: none;
     background: none;
@@ -204,7 +204,25 @@ aside div:first-of-type button:first-of-type {
 
 }
 
-aside div:nth-of-type(2) {
+.play_button_clicked {
+    z-index: au;
+    border: none;
+    background: none;
+    text-indent: -688em;
+    background-image: url(../images/pause.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 4em;
+    width: 6em;
+    height: 6em;
+    margin: auto auto;
+}
+
+.play_button_clicked:hover {
+    background-image: url(../images/pause_white.svg);
+}
+
+#forward {
     right: 0.5em;
     top: 76.85vh;
     height: 3em;
@@ -223,7 +241,7 @@ aside div:nth-of-type(2) {
     box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
 }
 
-aside div:nth-of-type(2) button:first-of-type {
+#forward_button {
     border: none;
     background: none;
     text-indent: -688em;
@@ -234,12 +252,18 @@ aside div:nth-of-type(2) button:first-of-type {
     width: 2em;
     height: 2em;
     margin: auto auto;
+<<<<<<< HEAD
+
+}
+
 
 }
 
 #forward:hover,
 #forward:focus {
     background-color: red;
+=======
+>>>>>>> dca778f4ea552b18cb13db8630c69581a206fcc0
 }
 
 /* PLAYER INFO END */
@@ -273,19 +297,20 @@ article:first-of-type {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: rgba(85, 205, 177, 1);
-    background: -moz-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(85, 205, 177, 1)), color-stop(100%, rgba(23, 155, 167, 1)));
-    background: -webkit-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    background: linear-gradient(135deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1)
+    background: rgba(249, 127, 45, 1);
+    background: -moz-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(249, 127, 45, 1)), color-stop(100%, rgba(227, 71, 105, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    background: linear-gradient(135deg, rgba(249, 127, 45, 1) 0%, rgba(227, 71, 105, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f97f2d', endColorstr='#e34769', GradientType=1);
+    color: white;
 }
 
 article:first-of-type > img:first-of-type {
     width: 10em;
-    border-radius: 1em;
+    border-radius: 5em;
     align-self: center;
 }
 
@@ -296,9 +321,9 @@ article:first-of-type > h2 {
 
 article:first-of-type > p {
     text-align: left;
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.5em;
-    margin: 1em 1em
+    margin: 2em 2em
 }
 
 article:first-of-type > p:nth-of-type(2) {
@@ -351,6 +376,7 @@ article:nth-of-type(2) > section > p {
     width: 90%;
     margin: 0 auto;
     max-width: 20em;
+    font-size: 1.2em;
 }
 
 article:nth-of-type(3) {
@@ -399,8 +425,9 @@ article:nth-of-type(3) > section > h1 {
 }
 article:nth-of-type(3) > section > h2{
     text-align: center;
-    color: rgba(227, 71, 105, 1);
+    color: white;
     margin: 0 0 0.3em 0;
+    font-weight: 700;
 }
 article:nth-of-type(3) > section > h3{
     font-weight: bolder;
