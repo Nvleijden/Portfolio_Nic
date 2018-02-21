@@ -5,6 +5,7 @@ var song = document.querySelector("#song");
 var genre = "hello";
 var genreBox = document.querySelector("#genre");
 var oldgenre = "niks";
+var songActive = 0;
 var i = 0;
 
 window.sr = ScrollReveal();
@@ -54,12 +55,12 @@ genreBox.onchange = function () {
 function playPause() {
     if (songActive == 0) {
         song.play();
-
         playButton.classList.add("play_button_clicked");
         playButton.classList.remove("play_button");
+        songActive = 1;
     } else {
         song.pause();
-
+        songActive = 0;
         playButton.classList.toggle("play_button");
         playButton.classList.remove("play_button_clicked");
     }
