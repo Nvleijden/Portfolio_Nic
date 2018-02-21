@@ -1,11 +1,14 @@
 var arrow = document.querySelector("#arrow");
 var playButton = document.querySelector(".play_button");
 var forwardButton = document.querySelector("#forward_button");
+var artist = document.querySelector("#artist");
+var title = document.querySelector("#title");
 var song = document.querySelector("#song");
 var genre = "hello";
 var genreBox = document.querySelector("#genre");
 var oldgenre = "niks";
 var i = 0;
+var songActive = false;
 window.sr = ScrollReveal();
 sr.reveal('.me');
 sr.reveal('.workItem', {
@@ -32,21 +35,28 @@ document.addEventListener("scroll", function () {
     }
 });
 // dance music
-var dancing = ["./audio/dance/Beam.mp3", "./audio/dance/IngridHybrid.mp3", "./audio/dance/Constellations.mp3"];
-var danceNames = ["Beam", "Ingrid Is A Hybrid", "Constellations"];
-var danceArtists = ["Mako", "Dusky", "Fred V & Grafix"];
+var dance = ["./audio/dance/Constellations.mp3", "./audio/dance/IngridHybrid.mp3", "./audio/dance/Beam.mp3"];
+
+var danceTitles = ["Constellations", "Ingrid Is A Hybrid", "Beam"];
+var danceArtists = ["Fred V & Grafix", "Dusky", "Mako"];
 
 
+function changeGenre() {
+    if (oldgenre != genreBox.value) {
+        i = 0;
+        console.log("ik trigger");
+        console.log(genreBox.value);
 
+        if (genreBox.value == "dancing") {
 
-
-genreBox.onchange = function () {
-
-
-
+            console.log("ik dans");
+            song.src = dance[i];
+            playPause();
+        }
     }
-
 }
+
+
 
 function playPause() {
     if (songActive == false) {

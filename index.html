@@ -23,11 +23,11 @@
         <span>        
 
         <label for="genre">Get to know me through music:</label>
-        <select name="genre" id="genre">
+        <select onchange="changeGenre()" name="genre" id="genre">
         <option value="none" disabled selected >I feel like:</option>
-        <option value="Dancing">Dancing</option>
+        <option value="dancing">Going all out!</option>
         <option value="rock">A Rockstar</option>
-        <option value="Indie">A badass</option>
+        <option value="indie">Something new</option>
         </select>
         </span>
 
@@ -37,8 +37,8 @@
     </header>
     <aside>
         <span>
-        <h1>Pay no mind</h1>
-        <h2>By Madeon</h2>
+        <h1 id="title">Pay no mind</h1>
+        <h2 id="artist">By Madeon</h2>
         </span>
         <div id="play">
             <button class="play_button" onclick="playPause()">playpause</button>
