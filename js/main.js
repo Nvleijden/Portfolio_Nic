@@ -58,12 +58,17 @@ function changeGenre() {
         i = 0;
         console.log("ik trigger");
         console.log(genreBox.value);
-
+        playPause();
         if (genreBox.value == "dancing") {
-
-            console.log("ik dans");
             song.src = dance[i];
-            playPause();
+            play();
+        } else if (genreBox.value == "rock") {
+            song.src = rock[i];
+            console.log(song.src);
+            play();
+        } else if (genreBox.value == "indie") {
+            song.src = indie[i];
+            play();
         }
     }
 }
@@ -73,17 +78,22 @@ function changeGenre() {
 function playPause() {
     if (songActive == false) {
         song.play();
-        playButton.classList.add("play_button_clicked");
-        playButton.classList.remove("play_button");
+        playButton.classList.toggle("play_button_clicked");
+        playButton.classList.toggle("play_button");
         songActive = true;
     } else {
         song.pause();
         songActive = false;
         playButton.classList.toggle("play_button");
-        playButton.classList.remove("play_button_clicked");
+        playButton.classList.toggle("play_button_clicked");
     }
+}
 
-
+function play() {
+    song.play();
+    playButton.classList.add("play_button_clicked");
+    playButton.classList.remove("play_button");
+    songActive = true;
 }
 
 //select next song
