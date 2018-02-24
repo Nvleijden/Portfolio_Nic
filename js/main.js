@@ -1,5 +1,7 @@
 var arrow = document.querySelector("#arrow");
 var playButton = document.querySelector(".play_button");
+var playArea = document.querySelector("#play");
+var forwardArea = document.querySelector("#forward");
 var forwardButton = document.querySelector("#forward_button");
 var artist = document.querySelector("#artist");
 var title = document.querySelector("#title");
@@ -10,7 +12,7 @@ var oldgenre = "niks";
 var i = 0;
 var songActive = false;
 song.volume = 0.3;
-
+var songPlayed = false;
 window.sr = ScrollReveal();
 sr.reveal('.me');
 sr.reveal('.workItem', {
@@ -80,6 +82,11 @@ function next() {
 }
 
 function changeGenre() {
+    if (songPlayed == false) {
+        playArea.style.opacity = 1;
+        forwardArea.style.opacity = 1;
+        songPlayed = true;
+    }
     if (oldgenre != genreBox.value) {
         i = 0;
         console.log("ik trigger");

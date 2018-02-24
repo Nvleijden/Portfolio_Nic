@@ -38,22 +38,15 @@ body > header {
     box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
 }
 
-header > span:first-of-type {
-    display: flex;
-}
 
 header h1 {
-    align-self: flex-start;
-    margin: 1em 0 0 0.5em;
-    width: 2.4em;
-    text-align: center;
     color: white;
-    padding: 0.3em;
-    border-bottom-right-radius: 0.5em;
-    -webkit-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
-    -moz-box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
-    box-shadow: 4px 6px 20px -1px rgba(0, 0, 0, 0.48);
 
+}
+
+header > span > h1 {
+    font-size: 1.8em;
+    width: 100%;
 }
 
 header h2 {
@@ -61,8 +54,15 @@ header h2 {
     color: white;
     margin: 1em 0 0 0;
     font-size: 3em;
+}
 
-
+header > span:first-of-type {
+    max-width: 20em;
+    min-width: 20em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex
 }
 
 header h3 {
@@ -75,6 +75,40 @@ header h3 {
 
 }
 
+header span:nth-of-type(2) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    text-align: center;
+    align-content: space-between;
+    max-width: 30em;
+    min-width: 20em;
+}
+
+header span:nth-of-type(2) section h1 {
+    font-size: 1.25em;
+    margin: 1em 0 0 0;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+
+header span:nth-of-type(2) section p {
+    font-size: 1em;
+    color: white;
+    margin: 0.3em 0 0 0;
+}
+
+header span:nth-of-type(2) section {
+    width: 30%;
+    margin: 1em auto 1em auto;
+    min-width: 6em;
+}
+
+header span img {
+    width: 50%;
+    max-width: 7.5em;
+    opacity: 0.7;
+}
 
 header > p {
     color: white;
@@ -108,16 +142,10 @@ header button {
     background-size: contain;
 }
 
-header > span > label {
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-    margin-bottom: 0.5em;
+header label {
     color: white;
-    font-weight: 500;
+    margin-bottom: 0.5em;
     font-size: 1.2em;
-    letter-spacing: 0.03em;
-    width: 11em;
 }
 
 /* PLAYER INFO START */
@@ -134,6 +162,7 @@ aside span {
 }
 
 aside h1 {
+    transition: all 2s;
     color: white;
     font-size: 2.5em;
     margin-top: 1.5em;
@@ -157,6 +186,7 @@ aside div {
 }
 
 #play {
+    opacity: 0;
     right: 4em;
     top: 74.3vh;
     height: 6em;
@@ -171,6 +201,7 @@ aside div {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1) -webkit-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     -moz-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
+    transition: all 2s;
 }
 
 play:hover,
@@ -202,6 +233,7 @@ play:focus {
     height: 6em;
     margin: auto auto;
 
+
 }
 
 .play_button_clicked {
@@ -223,6 +255,8 @@ play:focus {
 }
 
 #forward {
+    transition: all 2s;
+    opacity: 0;
     right: 0.5em;
     top: 76.85vh;
     height: 3em;
@@ -252,8 +286,7 @@ play:focus {
     width: 2em;
     height: 2em;
     margin: auto auto;
-<<<<<<< HEAD
-
+    <<<<<<< HEAD
 }
 
 
@@ -262,8 +295,6 @@ play:focus {
 #forward:hover,
 #forward:focus {
     background-color: red;
-=======
->>>>>>> dca778f4ea552b18cb13db8630c69581a206fcc0
 }
 
 /* PLAYER INFO END */
@@ -369,9 +400,10 @@ article:nth-of-type(2) > section > img {
     opacity: 0.85
 }
 
-article:nth-of-type(2) > section > img:hover{
+article:nth-of-type(2) > section > img:hover {
     opacity: 1;
 }
+
 article:nth-of-type(2) > section > p {
     width: 90%;
     margin: 0 auto;
@@ -423,13 +455,15 @@ article:nth-of-type(3) > section > h1 {
     text-align: center;
     margin-bottom: 0.5em;
 }
-article:nth-of-type(3) > section > h2{
+
+article:nth-of-type(3) > section > h2 {
     text-align: center;
     color: white;
     margin: 0 0 0.3em 0;
     font-weight: 700;
 }
-article:nth-of-type(3) > section > h3{
+
+article:nth-of-type(3) > section > h3 {
     font-weight: bolder;
     font-size: 1.2em;
     text-indent: 0.5em;
@@ -441,7 +475,7 @@ article:nth-of-type(3) > section > p {
     font-size: 1.2em
 }
 
-article:nth-of-type(3) > section> button{
+article:nth-of-type(3) > section > button {
     background: none;
     color: white;
     border-style: solid;
@@ -453,7 +487,8 @@ article:nth-of-type(3) > section> button{
     margin-bottom: 1em;
     border-color: rgba(85, 205, 177, 1);
 }
-article:nth-of-type(3) > section> button:hover{
+
+article:nth-of-type(3) > section > button:hover {
     background: rgba(85, 205, 177, 1);
     background: -moz-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(85, 205, 177, 1)), color-stop(100%, rgba(23, 155, 167, 1)));
@@ -461,9 +496,10 @@ article:nth-of-type(3) > section> button:hover{
     background: -o-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: -ms-linear-gradient(-45deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
     background: linear-gradient(135deg, rgba(85, 205, 177, 1) 0%, rgba(23, 155, 167, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1) ;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1);
     border-width: 0px;
 }
+
 article:nth-of-type(4) {
     width: 100%;
     background-color: #179ba7;
@@ -523,23 +559,26 @@ main > article > button:hover {
     color: rgba(28, 31, 38, 1);
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     color: white;
 }
-footer span img{
+
+footer span img {
     width: 3em;
     opacity: 0.75;
 }
-footer span img:hover{
+
+footer span img:hover {
     opacity: 1;
 }
-footer span{
+
+footer span {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
     height: 3em;
     width: 35%;
@@ -547,7 +586,7 @@ footer span{
     margin: 0 auto 2em auto;
 }
 
-footer h1{
+footer h1 {
     color: white;
     text-align: center;
     font-size: 4em;
@@ -555,16 +594,17 @@ footer h1{
     margin: 1em 0 0 0;
 }
 
-footer h2{
+footer h2 {
     font-variant: small-caps;
     font-size: 2em;
     text-align: center;
 }
 
-footer p{
+footer p {
     font-size: 1.8em;
     text-align: center;
 }
+
 /* PLAYER INFO END */
 
 #arrow {

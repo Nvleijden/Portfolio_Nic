@@ -19,17 +19,32 @@
         <h3>Designer</h3><h3>Programmer</h3><h3>Gamer</h3>
         </span>
 
-
-        <span>        
-
-        <label for="genre">Get to know me through music:</label>
+        <span>
+           <h1>How to get to know me:</h1>
+            <section>
+               <img src="/images/headphones.svg" alt="Headphones icon">
+                <h1>step1</h1>
+                <p>Put your headphones on</p>
+            </section>
+            <section>
+               <img src="/images/click.svg" alt="Choose icon">
+                <h1>step 2</h1>
+                <p>choose a genre</p>
+            </section>
+            <section>
+               <img src="/images/scroll-step.svg" alt="Scroll icon">
+                <h1>step 3</h1>
+                <p>scroll down and read about me</p>
+            </section>
+        </span>
+        <label for="genre">choose genre:</label>
         <select onchange="changeGenre()" name="genre" id="genre">
         <option value="none" disabled selected >I feel like:</option>
         <option value="dancing">Going all out!</option>
         <option value="rock">Rocking out</option>
         <option value="indie">Something new</option>
         </select>
-        </span>
+
 
         <audio id="song" src="" onended="next()"></audio>
 
