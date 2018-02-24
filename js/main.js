@@ -1,18 +1,22 @@
 var arrow = document.querySelector("#arrow");
 var playButton = document.querySelector(".play_button");
-var playArea = document.querySelector("#play");
-var forwardArea = document.querySelector("#forward");
-var forwardButton = document.querySelector("#forward_button");
+var playArea = document.querySelector(".play");
+var forwardArea = document.querySelector(".forward");
+var forwardButton = document.querySelector(".forward_button");
 var artist = document.querySelector("#artist");
 var title = document.querySelector("#title");
 var song = document.querySelector("#song");
 var genre = "hello";
 var genreBox = document.querySelector("#genre");
+var aside = document.querySelector("aside");
+var sticky = aside.offsetTop;
 var oldgenre = "niks";
 var i = 0;
 var songActive = false;
 song.volume = 0.3;
 var songPlayed = false;
+var arrowStopped = false;
+
 window.sr = ScrollReveal();
 sr.reveal('.me');
 sr.reveal('.workItem', {
@@ -22,22 +26,34 @@ sr.reveal('.workItem', {
 document.addEventListener("scroll", function () {
 
     if (window.pageYOffset > 50) {
-        console.log("Arrow stops");
-        arrow.classList.remove("animated");
-        arrow.classList.remove("infinite");
-        arrow.classList.remove("bounce");
-        arrow.style.display = "none";
-    }
-
-    if (window.pageYOffset < 50) {
-        console.log("Arrow go");
-        arrow.classList.add("animated");
-        arrow.classList.add("infinite");
-        arrow.classList.add("bounce");
-        arrow.style.display = "block";
-
+        if (arrowStopped == false) {
+            arrowStopped = true;
+            console.log("Arrow stops");
+            arrow.classList.remove("animated");
+            arrow.classList.remove("infinite");
+            arrow.classList.remove("bounce");
+            arrow.style.display = "none";
+        }
     }
 });
+
+function float() {
+    if (window.pageYOffset >= sticky) {
+        if (songPlayed == true) {
+            aside.classList.add("float");
+        }
+    } else {
+        if (songPlayed == true) {
+            aside.classList.remove("float");
+        }
+    }
+}
+
+
+
+window.onscroll = function () {
+    float()
+};
 // dance music
 var dance = ["./audio/dance/Constellations.mp3", "./audio/dance/IngridHybrid.mp3", "./audio/dance/Beam.mp3"];
 
@@ -55,7 +71,7 @@ var indieTitles = ["Disposable Friends", "Handclap", "we are the hearts"];
 var indieArtists = ["Humble Braggers", "Fitz and the Tantrums", "EXGF"];
 
 function next() {
-    console.log("triggered")
+    console.log("next Song")
     if (i == 2) {
         i = 0;
     } else {
@@ -89,8 +105,8 @@ function changeGenre() {
     }
     if (oldgenre != genreBox.value) {
         i = 0;
-        console.log("ik trigger");
-        console.log(genreBox.value);
+        console.log("genrebox changes");
+        console.log("Genrebox value = " + genreBox.value);
         if (genreBox.value == "dancing") {
             song.src = dance[i];
             artist.innerHTML = danceArtists[i];

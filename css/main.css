@@ -172,7 +172,35 @@ aside h1 {
 aside h2 {
     color: white;
     margin-top: 0;
+    transition: all 0.1s;
+}
 
+.float {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 10vh;
+    z-index: 700;
+}
+
+.float h1 {
+    top: 0;
+    margin: 0.2em 0 0 0;
+    transition: all 0.1s;
+}
+
+
+
+.float div:first-of-type {
+    top: 9.12vh;
+    transition: all 1s;
+    transition: opacity 2s;
+}
+
+.float div:nth-of-type(2) {
+    top: 11.5vh;
+    transition: all 1s;
+    transition: opacity 2s;
 }
 
 aside div {
@@ -183,9 +211,10 @@ aside div {
     flex-direction: column;
     justify-content: center;
     display: flex;
+    transition: all 0.3s;
 }
 
-#play {
+.play {
     opacity: 0;
     right: 4em;
     top: 74.3vh;
@@ -201,7 +230,8 @@ aside div {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55cdb1', endColorstr='#179ba7', GradientType=1) -webkit-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     -moz-box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
     box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
-    transition: all 2s;
+    transition: all 0.3s;
+    transition: opacity 2s;
 }
 
 play:hover,
@@ -254,8 +284,9 @@ play:focus {
     background-image: url(../images/pause_white.svg);
 }
 
-#forward {
-    transition: all 2s;
+.forward {
+    transition: all 0.3s;
+    transition: opacity 2s;
     opacity: 0;
     right: 0.5em;
     top: 76.85vh;
@@ -275,7 +306,7 @@ play:focus {
     box-shadow: 0px 13px 30px -5px rgba(0, 0, 0, 0.84);
 }
 
-#forward_button {
+.forward_button {
     border: none;
     background: none;
     text-indent: -688em;
@@ -286,7 +317,6 @@ play:focus {
     width: 2em;
     height: 2em;
     margin: auto auto;
-    <<<<<<< HEAD
 }
 
 
