@@ -1,9 +1,12 @@
 @media(min-width: 475px) {
     .float div:first-of-type {
-        top: 5.12vh;
+        top: 6.3vh;
     }
     .float div:nth-of-type(2) {
-        top: 7.79vh;
+        top: 8.29vh;
+    }
+    .float {
+        height: 7vh;
     }
 }
 
