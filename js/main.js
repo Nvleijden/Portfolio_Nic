@@ -58,17 +58,17 @@ window.onscroll = function () {
 var dance = ["./audio/dance/Constellations.mp3", "./audio/dance/IngridHybrid.mp3", "./audio/dance/Beam.mp3"];
 
 var danceTitles = ["Constellations", "Ingrid Is A Hybrid", "Beam"];
-var danceArtists = ["Fred V & Grafix", "Dusky", "Mako"];
+var danceArtists = ["by Fred V & Grafix", "by Dusky", "by Mako"];
 
 //rock
 var rock = ["./audio/rock/Arabella.mp3", "./audio/rock/BFG.mp3", "./audio/rock/out_of_the_black.mp3"];
 var rockTitles = ["Arabella", "BFG Division", "Out of the black"];
-var rockArtists = ["Artic Monkeys", "Doom", "Royal Blood"];
+var rockArtists = ["by Artic Monkeys", " by Doom", "by Royal Blood"];
 
 //indie
 var indie = ["./audio/indie/Disposable.mp3", "./audio/indie/Handclap.mp3", "./audio/indie/hearts.mp3"];
 var indieTitles = ["Disposable Friends", "Handclap", "we are the hearts"];
-var indieArtists = ["Humble Braggers", "Fitz and the Tantrums", "EXGF"];
+var indieArtists = ["by Humble Braggers", "by Fitz and the Tantrums", "by EXGF"];
 
 function next() {
     console.log("next Song")
