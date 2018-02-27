@@ -60,7 +60,6 @@
     }
 
     aside .forward {
-
         top: 86.65vh;
     }
 
@@ -76,9 +75,16 @@
 
     aside.float .play {
         top: 9vh;
-
     }
 
+    .nice-select {
+        width: 50%;
+        max-width: 20em;
+        font-size: 1.5em;
+        height: 2em;
+        text-align: center;
+        padding-top: 0.15em;
+    }
 
 
 }

@@ -16,6 +16,11 @@ body {
     grid-template-columns: 2% 1fr 2%;
 }
 
+input[type="button"]:focus,
+button:focus,
+button:active {
+    outline: none;
+}
 
 /* HEAD */
 
@@ -218,7 +223,6 @@ aside div {
 
 .play {
     opacity: 0;
-    right: 4em;
     top: 74.3vh;
     height: 6em;
     width: 6em;
@@ -386,7 +390,9 @@ article:first-of-type > p {
     text-align: left;
     font-size: 1.2em;
     line-height: 1.5em;
-    margin: 2em 2em
+    margin: 2em auto 1em auto;
+    width: 70%;
+    max-width: 30em;
 }
 
 article:first-of-type > p:nth-of-type(2) {
@@ -419,9 +425,6 @@ article:nth-of-type(2) > section {
     justify-content: center;
 }
 
-article:nth-of-type(2) > section:nth-of-type(odd) {
-    margin: 5em auto 3em auto;
-}
 
 article:nth-of-type(2) > section > h1 {
     font-weight: 500;
@@ -517,7 +520,7 @@ article:nth-of-type(3) > section > button {
     background: none;
     color: white;
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
     font-size: 1.3em;
     font-weight: 700;
     border-radius: 0.5em;
@@ -666,4 +669,30 @@ footer p {
     aside div:nth-of-type(2) {
         right: 1em;
     }
+}
+
+@media (max-width: 500px) {
+    aside div:first-of-type {
+        right: 4em;
+    }
+    .float {
+        display: none
+    }
+    header h2 {
+        margin-top: 0.2em;
+    }
+
+    header h3 {
+        margin-top: 0;
+    }
+
+    header span:nth-of-type(2) {
+        width: 20%;
+        margin-top: -1.5em
+    }
+
+    aside h1 {
+        margin-top: 1em;
+    }
+
 }

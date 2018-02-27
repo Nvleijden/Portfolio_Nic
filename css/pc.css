@@ -1,1 +1,178 @@
+@media (min-width: 1200px) {
+    #arrow {
+        width: 10%;
+        max-width: 2em;
+    }
+    header h2 {
+        margin-top: 0.2em;
+    }
+    header span:first-of-type {
+        width: 70%;
+        max-width: 50em;
+    }
+    header span:nth-of-type(2) {
+        width: 70%;
+        max-width: 50em;
+        margin-top: -2em;
+    }
 
+    header label {
+        font-size: 2em;
+        margin-top: 1em;
+        top: 40vh;
+    }
+
+    .nice-select {
+        margin-top: 0.2em;
+        width: 50%;
+        max-width: 20em;
+    }
+    main article:first-of-type h2 {
+        margin-top: 2em;
+        width: 100%;
+        margin: 2em auto 0 auto;
+        max-width: 30em;
+        font-size: 3em;
+    }
+    main article:first-of-type img {
+        margin-top: 1.2em;
+        width: 60%;
+        max-width: 30em;
+        font-size: 2em;
+    }
+    main article:first-of-type p {
+        width: 60%;
+        max-width: 30em;
+        font-size: 2em;
+    }
+    article:nth-of-type(2) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    article:nth-of-type(2) > h1 {
+        min-width: 100%;
+        width: 100%;
+        height: 1em;
+        max-width: none;
+    }
+
+    article:nth-of-type(2) section {
+        min-width: 20%;
+        width: 30%;
+        max-width: 30em;
+        margin: 5em;
+        padding: 2em;
+        height: 20em;
+    }
+    article:nth-of-type(2) section:first-of-type {}
+
+    article:nth-of-type(2) section img {
+        width: 40%;
+        max-width: 10em;
+    }
+
+    article:nth-of-type(2) section h1 {
+        margin-top: 0;
+        align-self: flex-start;
+        text-align: center;
+        width: 100%;
+    }
+    article:nth-of-type(2) section:nth-of-type(1) {
+        margin-top: 4.2em;
+    }
+    article:nth-of-type(2) section:nth-of-type(odd) h1 {
+        margin-top: -0.8em;
+    }
+    article:nth-of-type(2) section) p {
+        align-self: flex-end;
+
+    }
+    article:nth-of-type(3) > section > img {
+        height: 20em;
+    }
+
+
+    article:nth-of-type(3) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    article:nth-of-type(3) > h1 {
+        width: 100%;
+    }
+
+    article:nth-of-type(3) > button {
+        width: 50%;
+        margin-left: 25vw;
+        margin-bottom: 2em;
+
+    }
+
+    article:nth-of-type(3) {
+        padding-left: auto;
+        padding-right: auto;
+    }
+    article:nth-of-type(3) > section {
+        margin: 10em;
+        min-width: 45%;
+        width: 40%;
+        max-width: 40em;
+        height: auto;
+        max-height: 45em;
+        margin-bottom: 3em;
+        padding: 0 1.5em;
+
+        margin: 2em auto;
+    }
+
+    article:nth-of-type(3) > section > button:first-of-type {
+        height: 2em;
+    }
+
+    footer span {
+        width: 10%;
+        max-width: 15em;
+    }
+
+    .float div:first-of-type {
+        top: 7.3vh;
+    }
+
+    .float span {
+        display: flex;
+    }
+    .float span h1 {
+        font-size: 3.5em;
+        margin-top: 0.1em;
+    }
+    .float span h2 {
+        justify-content: center;
+        align-self: center;
+        margin: 1em 0 0 0.2em;
+    }
+
+    aside .play {
+        right: 5vw;
+        top: 84.5vh;
+    }
+
+    aside .forward {
+        top: 86.2vh;
+        right: 2vw;
+    }
+
+    .float div:nth-of-type(1) {
+        top: 4.9vh;
+        right: 5vw;
+    }
+    .float div:nth-of-type(2) {
+        top: 6.59vh;
+        right: 2vw;
+    }
+    .float {
+        height: 5vh;
+    }
+
+}
