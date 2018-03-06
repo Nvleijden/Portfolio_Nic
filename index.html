@@ -41,6 +41,7 @@
                 <p>scroll down and read about me</p>
             </section>
         </span>
+    
         <label for="genre">choose genre:</label>
         <select onchange="changeGenre()" name="genre" id="genre">
         <option value="none" disabled selected >I feel like:</option>
@@ -48,7 +49,7 @@
         <option value="rock">Rocking out</option>
         <option value="indie">Something new</option>
         </select>
-
+        
 
         <audio id="song" src="" onended="next()"></audio>
 
@@ -65,6 +66,7 @@
         <div class="forward">
             <button class="forward_button" onclick="next()">Skip</button>
         </div>
+        
     </aside>
     <main>
         <img src="images/scroll.svg" alt="Scroll down to know more about me" id="arrow" class="animated bounce">

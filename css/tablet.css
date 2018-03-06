@@ -18,21 +18,26 @@
         grid-template-rows: [row1-start] 85vh[row1-end row2-start] 15vh [row2-end row3-start] auto[row3-end];
         grid-template-columns: 2% 1fr 2%;
     }
-
+    
     aside h1 {
         margin-top: 0.5em;
     }
     header h2 {
         font-size: 6em;
         margin-bottom: 0;
+        margin-top: 0.1em;
     }
     header span:first-of-type {
         width: 75%;
         max-width: 75%;
+        height: 1em;
         margin-top: 0;
         margin-bottom: 4em;
     }
-
+    
+    aside div:nth-of-type(2){
+        bottom: 2em;
+    }
     header h3 {
         margin: 0;
         font-size: 2em;

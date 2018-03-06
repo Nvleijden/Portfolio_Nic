@@ -13,19 +13,29 @@
     header span:nth-of-type(2) {
         width: 70%;
         max-width: 50em;
+        max-height: 20em;
         margin-top: -2em;
+        overflow: hidden;
     }
-
+    
+    header span:nth-of-type(2) img{
+        height: 2em;
+    }
+    
+    .float div:nth-of-type(2){
+       margin-top: 10eml;
+        
+    }
+    
     header label {
         font-size: 2em;
         margin-top: 1em;
-        top: 40vh;
     }
 
     .nice-select {
         margin-top: 0.2em;
         width: 50%;
-        max-width: 20em;
+        max-width: 10em;
     }
     main article:first-of-type h2 {
         margin-top: 2em;
